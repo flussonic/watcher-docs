@@ -24,7 +24,8 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="prev" title="Welcome to Flussonic Watcher’s documentation!" href="index.html" /> 
 
@@ -283,6 +284,14 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--vsaas-api-v2-cameras-(path-name)-ptz">PUT /vsaas/api/v2/cameras/(path:name)/ptz</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--vsaas-api-v2-cameras-(path-name)-ptz">DELETE /vsaas/api/v2/cameras/(path:name)/ptz</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-cameras-(path-name)">PUT /vsaas/api/v2/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -411,30 +420,34 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Users</td>
+<td><a class="reference external" href="#post--vsaas-api-v2-cameras-import">POST /vsaas/api/v2/cameras/import</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-users-import">POST /vsaas/api/v2/users/import</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-users">POST /vsaas/api/v2/users</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-users">GET /vsaas/api/v2/users</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-users-(int-user_id)-cameras">GET /vsaas/api/v2/users/(int:user_id)/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-users-(int-id)">PUT /vsaas/api/v2/users/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-users-(int-id)">DELETE /vsaas/api/v2/users/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-users-(int-id)">GET /vsaas/api/v2/users/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -604,6 +617,455 @@ Used as an integration point with a custom service</p>
 </div>
 <div class="section" id="camera-management">
 <h2>Camera Management<a class="headerlink" href="#camera-management" title="Permalink to this headline">¶</a></h2>
+<dl class="post">
+<dt id="post--vsaas-api-v2-cameras-import">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/cameras/import</code><a class="headerlink" href="#post--vsaas-api-v2-cameras-import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import collection of cameras</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request Headers:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> &#8211; <code class="docutils literal"><span class="pre">application/json</span></code> or <code class="docutils literal"><span class="pre">text/csv</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object Array:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">auth_token</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>is dvr allowed for owner</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>camera owner&#8217;s username</span></li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>camera owner&#8217;s password</span></li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">registered_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_enabled</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>is camera owner enabled</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--vsaas-api-v2-cameras">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/cameras</code><a class="headerlink" href="#post--vsaas-api-v2-cameras" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-cameras">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/cameras</code><a class="headerlink" href="#get--vsaas-api-v2-cameras" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns camera list.</p>
+<p>Mention: this API call has 2 flavors: admin mode and user mode and it returns
+different data for these modes.</p>
+<p>If no header X-Vsaas-User is specified, then you get all cameras with their 
+configuration information.</p>
+<p>If header X-Vsaas-User or X-Vsaas-Session is provided, then response will contain
+only cameras visible to specified user with reduced set of fields.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>favorite</strong> &#8211; 1 or 0(default) - return only favorite cameras</li>
+<li><strong>agent</strong> &#8211; 1 or 0(default) - return only cameras with agent_id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object Aray:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--vsaas-api-v2-cameras-(path-name)-agent-disconnect">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><code class="descname">/agent-disconnect</code><a class="headerlink" href="#post--vsaas-api-v2-cameras-(path-name)-agent-disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect camera agent</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--vsaas-api-v2-cameras-(path-name)-user_attributes">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><code class="descname">/user_attributes</code><a class="headerlink" href="#post--vsaas-api-v2-cameras-(path-name)-user_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change camera attribute</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--vsaas-api-v2-cameras-(path-name)-ptz">
+<code class="descname">PUT </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><code class="descname">/ptz</code><a class="headerlink" href="#put--vsaas-api-v2-cameras-(path-name)-ptz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send ptz command to camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">down</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">in_</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">left</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">out</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">right</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">up</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-cameras-(path-name)-ptz">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><code class="descname">/ptz</code><a class="headerlink" href="#delete--vsaas-api-v2-cameras-(path-name)-ptz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop ptz command</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--vsaas-api-v2-cameras-(path-name)">
+<code class="descname">PUT </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-cameras-(path-name)">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes camera</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-cameras-(path-name)">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get camera info</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="user-management">
 <h2>User Management<a class="headerlink" href="#user-management" title="Permalink to this headline">¶</a></h2>
@@ -1414,6 +1876,78 @@ Used as an integration point with a custom service</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object Array:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">end_at</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">event_data</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1446,6 +1980,78 @@ Used as an integration point with a custom service</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Array:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">end_at</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">event_data</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2055,11 +2661,16 @@ Used as an integration point with a custom service</p>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
   </script> 
 
