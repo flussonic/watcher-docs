@@ -93,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#mosaics">Mosaics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#streamers">Streamers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-serials">User Serials</a></li>
 </ul>
 </li>
 </ul>
@@ -324,19 +325,27 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)">GET /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-groups-(int-group_id)-cameras">POST /vsaas/api/v2/groups/(int:group_id)/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-group_id)-cameras">GET /vsaas/api/v2/groups/(int:group_id)/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Group Users</td>
+<tr class="row-odd"><td>Group Users</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">PUT /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">DELETE /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">GET /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -363,20 +372,20 @@
 <td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-id)">GET /vsaas/api/v2/groups/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Mosaic</td>
-<td><a class="reference external" href="#delete--vsaas-api-v2-mosaics-(int-mosaic_id)">DELETE /vsaas/api/v2/mosaics/(int:mosaic_id)</a></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Mosaics</td>
+<tr class="row-even"><td>Mosaics</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-mosaics">POST /vsaas/api/v2/mosaics</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-mosaics">GET /vsaas/api/v2/mosaics</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-mosaics-(int-mosaic_id)">PUT /vsaas/api/v2/mosaics/(int:mosaic_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--vsaas-api-v2-mosaics-(int-mosaic_id)">DELETE /vsaas/api/v2/mosaics/(int:mosaic_id)</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
@@ -419,35 +428,55 @@
 <td><a class="reference external" href="#get--vsaas-api-v2-streamers-(int-streamer_id)">GET /vsaas/api/v2/streamers/(int:streamer_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Users</td>
+<tr class="row-even"><td>UserSerials</td>
+<td><a class="reference external" href="#post--vsaas-api-v2-user-serials">POST /vsaas/api/v2/user-serials</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-user-serials">GET /vsaas/api/v2/user-serials</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#put--vsaas-api-v2-user-serials-(path-serial)">PUT /vsaas/api/v2/user-serials/(path:serial)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--vsaas-api-v2-user-serials-(path-serial)">DELETE /vsaas/api/v2/user-serials/(path:serial)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-user-serials-(path-serial)">GET /vsaas/api/v2/user-serials/(path:serial)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Users</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-cameras-import">POST /vsaas/api/v2/cameras/import</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-users-import">POST /vsaas/api/v2/users/import</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-users">POST /vsaas/api/v2/users</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-users">GET /vsaas/api/v2/users</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-users-(int-user_id)-cameras">GET /vsaas/api/v2/users/(int:user_id)/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-users-(int-id)">PUT /vsaas/api/v2/users/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-users-(int-id)">DELETE /vsaas/api/v2/users/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-users-(int-id)">GET /vsaas/api/v2/users/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
@@ -602,11 +631,12 @@ Used as an integration point with a custom service</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
-<li><strong>session</strong> (<em>string</em>) &#8211; SessionId</li>
-<li><strong>login</strong> (<em>bool</em>) &#8211; </li>
-<li><strong>is_admin</strong> (<em>bool</em>) &#8211; </li>
-<li><strong>notification_email</strong> (<em>bool</em>) &#8211; </li>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">groups_count</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">session</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -697,6 +727,7 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -763,6 +794,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
@@ -775,6 +807,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
@@ -930,6 +963,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -1007,6 +1041,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1019,6 +1054,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
@@ -1090,6 +1126,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>array</em><span>)</span></li>
 <li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1105,14 +1142,14 @@ only cameras visible to specified user with reduced set of fields.</p>
 <dl class="post">
 <dt id="post--vsaas-api-v2-users">
 <code class="descname">POST </code><code class="descname">/vsaas/api/v2/users</code><a class="headerlink" href="#post--vsaas-api-v2-users" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds user or users</p>
+<dd><p>Adds user</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">Request Headers:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> &#8211; <code class="docutils literal"><span class="pre">application/json</span></code> or <code class="docutils literal"><span class="pre">text/csv</span></code></li>
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> &#8211; <code class="docutils literal"><span class="pre">application/json</span></code></li>
 </ul>
 </td>
 </tr>
@@ -1124,6 +1161,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1151,6 +1189,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">can_dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -1161,6 +1200,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">group</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">can_manage_cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_group</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_users</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">user_count</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1215,6 +1257,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1227,6 +1270,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
@@ -1288,7 +1332,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object Array:</th></tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
 <tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first">
 <li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1302,13 +1346,14 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Array:</th></tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
 <li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1361,6 +1406,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">can_dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -1371,6 +1417,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">group</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">can_manage_cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_group</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_users</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">user_count</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1407,6 +1456,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">max_cam_slots</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_dvr_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_user_slots</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1418,6 +1470,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_cam_slots</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_dvr_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_user_slots</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1440,8 +1495,14 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">can_manage_cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_group</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_users</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_cam_slots</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_dvr_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_user_slots</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1503,6 +1564,68 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
 <li><strong>group_id</strong> (<em>integer</em>) &#8211; Group identifier</li>
 <li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+<li><strong>delete_camera</strong> &#8211; 1 or 0(default) - only for admins, removes camera entirely</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>(only if camera is not member of any other group)</p>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/groups/</code><span class="sig-paren">(</span><em class="property">int: </em><em>group_id</em><span class="sig-paren">)</span><code class="descname">/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns camera in the group</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>group_id</strong> (<em>integer</em>) &#8211; Group identifier</li>
+<li><strong>name</strong> (<em>string</em>) &#8211; Camera name</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">is_other_group_member</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -1618,6 +1741,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">is_other_group_member</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </td>
@@ -1670,6 +1794,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">is_other_group_member</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">user</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1699,6 +1824,56 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
 <li><strong>group_id</strong> (<em>integer</em>) &#8211; Group identifier</li>
 <li><strong>user_id</strong> (<em>integer</em>) &#8211; User identifier</li>
+<li><strong>delete_user</strong> &#8211; 1 or 0(default) - only for admins, removes user entirely</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>(only if user is not member of any other group)</p>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/groups/</code><span class="sig-paren">(</span><em class="property">int: </em><em>group_id</em><span class="sig-paren">)</span><code class="descname">/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns user in the group</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>group_id</strong> (<em>integer</em>) &#8211; Group identifier</li>
+<li><strong>user_id</strong> (<em>integer</em>) &#8211; User identifier</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">user_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">can_dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">can_manage_cameras</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">can_manage_users</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">can_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">group</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">is_other_group_member</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">user</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">usergroup_id</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -1749,6 +1924,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">is_other_group_member</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">user</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1785,6 +1961,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_cam_slots</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_dvr_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_user_slots</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1825,8 +2004,14 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">can_manage_cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_group</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">can_manage_users</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_cam_slots</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_dvr_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">max_user_slots</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1838,6 +2023,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">can_manage_users</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">can_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">is_other_group_member</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">user</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1900,6 +2086,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1912,6 +2099,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
@@ -2004,6 +2192,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2016,6 +2205,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
@@ -2597,6 +2787,128 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">peeklio_disable_notifications</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">peeklio_license_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">service</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="user-serials">
+<h2>User Serials<a class="headerlink" href="#user-serials" title="Permalink to this headline">¶</a></h2>
+<dl class="post">
+<dt id="post--vsaas-api-v2-user-serials">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/user-serials</code><a class="headerlink" href="#post--vsaas-api-v2-user-serials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create UserSerial</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request Headers:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> &#8211; <code class="docutils literal"><span class="pre">application/json</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">serial</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-user-serials">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/user-serials</code><a class="headerlink" href="#get--vsaas-api-v2-user-serials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of UserSerials</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Array:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">serial</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="put">
+<dt id="put--vsaas-api-v2-user-serials-(path-serial)">
+<code class="descname">PUT </code><code class="descname">/vsaas/api/v2/user-serials/</code><span class="sig-paren">(</span><em class="property">path: </em><em>serial</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-user-serials-(path-serial)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies UserSerial</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>serial</strong> (<em>integer</em>) &#8211; Serial number</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">serial</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">serial</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-user-serials-(path-serial)">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/user-serials/</code><span class="sig-paren">(</span><em class="property">path: </em><em>serial</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-user-serials-(path-serial)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes UserSerial</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>serial</strong> (<em>integer</em>) &#8211; Serial number</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-user-serials-(path-serial)">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/user-serials/</code><span class="sig-paren">(</span><em class="property">path: </em><em>serial</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-user-serials-(path-serial)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single UserSerial</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>serial</strong> (<em>integer</em>) &#8211; Serial number</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">serial</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </td>
 </tr>
