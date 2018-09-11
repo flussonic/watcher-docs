@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="prev" title="Welcome to Flussonic Watcher’s documentation!" href="index.html" /> 
 
@@ -94,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#streamers">Streamers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user-serials">User Serials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#event-notifications">Event Notifications</a></li>
 </ul>
 </li>
 </ul>
@@ -269,163 +269,219 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Cameras</td>
+<td><a class="reference external" href="#put--vsaas-api-v2-cameras-discover">PUT /vsaas/api/v2/cameras/discover</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#delete--vsaas-api-v2-cameras-discover">DELETE /vsaas/api/v2/cameras/discover</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-cameras-discover">GET /vsaas/api/v2/cameras/discover</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-cameras">POST /vsaas/api/v2/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-cameras">GET /vsaas/api/v2/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-cameras-(path-name)-agent-disconnect">POST /vsaas/api/v2/cameras/(path:name)/agent-disconnect</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-cameras-(path-name)-user_attributes">POST /vsaas/api/v2/cameras/(path:name)/user_attributes</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-cameras-(path-name)-ptz">PUT /vsaas/api/v2/cameras/(path:name)/ptz</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-cameras-(path-name)-ptz">DELETE /vsaas/api/v2/cameras/(path:name)/ptz</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-cameras-(path-name)">PUT /vsaas/api/v2/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-cameras-(path-name)">DELETE /vsaas/api/v2/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-cameras-(path-name)">GET /vsaas/api/v2/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>Events</td>
+<tr class="row-even"><td>Events</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-events">POST /vsaas/api/v2/events</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-events">GET /vsaas/api/v2/events</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>Group Cameras</td>
+<tr class="row-even"><td>Group Cameras</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)-order">POST /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)/order</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)">PUT /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)">DELETE /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)">GET /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-groups-(int-group_id)-cameras">POST /vsaas/api/v2/groups/(int:group_id)/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-group_id)-cameras">GET /vsaas/api/v2/groups/(int:group_id)/cameras</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>Group Users</td>
+<tr class="row-even"><td>Group Users</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">PUT /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">DELETE /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)">GET /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-groups-(int-group_id)-users">POST /vsaas/api/v2/groups/(int:group_id)/users</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>Groups</td>
+<tr class="row-even"><td>Groups</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-groups">POST /vsaas/api/v2/groups</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-groups">GET /vsaas/api/v2/groups</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-groups-(int-id)">PUT /vsaas/api/v2/groups/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-groups-(int-id)">DELETE /vsaas/api/v2/groups/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-groups-(int-id)">GET /vsaas/api/v2/groups/(int:id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Mosaics</td>
+<tr class="row-odd"><td>Mosaics</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-mosaics">POST /vsaas/api/v2/mosaics</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-mosaics">GET /vsaas/api/v2/mosaics</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-mosaics-(int-mosaic_id)">PUT /vsaas/api/v2/mosaics/(int:mosaic_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-mosaics-(int-mosaic_id)">DELETE /vsaas/api/v2/mosaics/(int:mosaic_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-mosaics-(int-mosaic_id)">GET /vsaas/api/v2/mosaics/(int:mosaic_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>Settings</td>
+<tr class="row-even"><td>Notifications</td>
+<td><a class="reference external" href="#post--vsaas-api-v2-my-subscriptions-camera_motion">POST /vsaas/api/v2/my/subscriptions/camera_motion</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--vsaas-api-v2-my-subscriptions">POST /vsaas/api/v2/my/subscriptions</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-my-subscriptions">GET /vsaas/api/v2/my/subscriptions</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--vsaas-api-v2-my-device-tokens">POST /vsaas/api/v2/my/device-tokens</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-my-device-tokens">GET /vsaas/api/v2/my/device-tokens</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--vsaas-api-v2-my-device-tokens-(string-token)-confirm">POST /vsaas/api/v2/my/device-tokens/(string:token)/confirm</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-my-subscriptions-(int-id)">GET /vsaas/api/v2/my/subscriptions/(int:id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-my-device-tokens-(string-token)">GET /vsaas/api/v2/my/device-tokens/(string:token)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Settings</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-settings-initial">POST /vsaas/api/v2/settings/initial</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-settings">PUT /vsaas/api/v2/settings</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-settings">GET /vsaas/api/v2/settings</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Streamers</td>
+<tr class="row-odd"><td>Streamers</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-streamers">POST /vsaas/api/v2/streamers</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-streamers">GET /vsaas/api/v2/streamers</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#post--vsaas-api-v2-streamers-(int-streamer_id)-provision">POST /vsaas/api/v2/streamers/(int:streamer_id)/provision</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#put--vsaas-api-v2-streamers-(int-streamer_id)">PUT /vsaas/api/v2/streamers/(int:streamer_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
+<tr class="row-odd"><td>&nbsp;</td>
 <td><a class="reference external" href="#delete--vsaas-api-v2-streamers-(int-streamer_id)">DELETE /vsaas/api/v2/streamers/(int:streamer_id)</a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
+<tr class="row-even"><td>&nbsp;</td>
 <td><a class="reference external" href="#get--vsaas-api-v2-streamers-(int-streamer_id)">GET /vsaas/api/v2/streamers/(int:streamer_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Usage</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-stream_usages">GET /vsaas/api/v2/stream_usages</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-disk_usages">GET /vsaas/api/v2/disk_usages</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>UsageStatistic</td>
+<td><a class="reference external" href="#get--vsaas-api-v2-usage_statistic">GET /vsaas/api/v2/usage_statistic</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>UserSerials</td>
@@ -647,6 +703,68 @@ Used as an integration point with a custom service</p>
 </div>
 <div class="section" id="camera-management">
 <h2>Camera Management<a class="headerlink" href="#camera-management" title="Permalink to this headline">¶</a></h2>
+<dl class="put">
+<dt id="put--vsaas-api-v2-cameras-discover">
+<code class="descname">PUT </code><code class="descname">/vsaas/api/v2/cameras/discover</code><a class="headerlink" href="#put--vsaas-api-v2-cameras-discover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start cameras discovering</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-cameras-discover">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/cameras/discover</code><a class="headerlink" href="#delete--vsaas-api-v2-cameras-discover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop cameras discovering</p>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-cameras-discover">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/cameras/discover</code><a class="headerlink" href="#get--vsaas-api-v2-cameras-discover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of discovered cameras.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Aray:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">bitrate</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">capabilities</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">codec</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">endpoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">error</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">fps</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">height</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">jpeg_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">manufacturer</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">net</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">onvif</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">profile_name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">width</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="post">
 <dt id="post--vsaas-api-v2-cameras-import">
 <code class="descname">POST </code><code class="descname">/vsaas/api/v2/cameras/import</code><a class="headerlink" href="#post--vsaas-api-v2-cameras-import" title="Permalink to this definition">¶</a></dt>
@@ -675,7 +793,6 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>is dvr allowed for owner</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -691,6 +808,7 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -722,7 +840,6 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -737,6 +854,7 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -789,7 +907,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -832,6 +949,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -839,6 +957,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </li>
@@ -879,6 +998,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </td>
@@ -958,7 +1078,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -973,6 +1092,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1036,7 +1156,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1079,6 +1198,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1086,6 +1206,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </li>
@@ -1105,342 +1226,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </div>
 <div class="section" id="user-management">
 <h2>User Management<a class="headerlink" href="#user-management" title="Permalink to this headline">¶</a></h2>
-<dl class="post">
-<dt id="post--vsaas-api-v2-users-import">
-<code class="descname">POST </code><code class="descname">/vsaas/api/v2/users/import</code><a class="headerlink" href="#post--vsaas-api-v2-users-import" title="Permalink to this definition">¶</a></dt>
-<dd><p>Import collection of users</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Request Headers:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> &#8211; <code class="docutils literal"><span class="pre">application/json</span></code> or <code class="docutils literal"><span class="pre">text/csv</span></code></li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object Array:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">groups</strong><span> (</span><em>array</em><span>)</span></li>
-<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="post">
-<dt id="post--vsaas-api-v2-users">
-<code class="descname">POST </code><code class="descname">/vsaas/api/v2/users</code><a class="headerlink" href="#post--vsaas-api-v2-users" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds user</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Request Headers:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
-<li><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> &#8211; <code class="docutils literal"><span class="pre">application/json</span></code></li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">camera_count</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="get">
-<dt id="get--vsaas-api-v2-users">
-<code class="descname">GET </code><code class="descname">/vsaas/api/v2/users</code><a class="headerlink" href="#get--vsaas-api-v2-users" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a user list</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Array:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">camera_count</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">can_dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">can_manage_cameras</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">can_manage_users</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">can_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">can_manage_cameras</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">can_manage_group</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">can_manage_users</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">user_count</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">usergroup_id</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="get">
-<dt id="get--vsaas-api-v2-users-(int-user_id)-cameras">
-<code class="descname">GET </code><code class="descname">/vsaas/api/v2/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/cameras</code><a class="headerlink" href="#get--vsaas-api-v2-users-(int-user_id)-cameras" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of user&#8217;s cameras</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object Array:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
-<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
-<li><strong class="first">access</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">agent_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
-<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
-<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
-<li><strong>id</strong> (<em>integer</em>) &#8211; User identifier</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="put">
-<dt id="put--vsaas-api-v2-users-(int-id)">
-<code class="descname">PUT </code><code class="descname">/vsaas/api/v2/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-users-(int-id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Modifies user</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
-<li><strong>id</strong> (<em>integer</em>) &#8211; User identifier</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first">
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="delete">
-<dt id="delete--vsaas-api-v2-users-(int-id)">
-<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-users-(int-id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes user</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
-<li><strong>id</strong> (<em>integer</em>) &#8211; User identifier</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="get">
-<dt id="get--vsaas-api-v2-users-(int-id)">
-<code class="descname">GET </code><code class="descname">/vsaas/api/v2/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-users-(int-id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single user</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
-<li><strong>id</strong> (<em>integer</em>) &#8211; User identifier</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">camera_count</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">dvr_allowed</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
-<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">can_dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">can_manage_cameras</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">can_manage_users</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">can_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">group</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">can_manage_cameras</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">can_manage_group</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">can_manage_users</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">user_count</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">order_num</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">usergroup_id</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</li>
-<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong class="first">note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 <div class="section" id="group-management">
 <h2>Group Management<a class="headerlink" href="#group-management" title="Permalink to this headline">¶</a></h2>
@@ -1599,27 +1384,72 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1664,27 +1494,72 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1716,27 +1591,72 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">agent_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">agent_model</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">agent_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">connected_at</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">local_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streampoint</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">group_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">groups</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">motion_detector</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">owner</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">permissions</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">dvr</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">edit</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">view</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</li>
+<li><strong class="first">playback_config</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">postal_address</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">stream_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">alive</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">lifetime</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtmp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">rtsp_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">source_error</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2081,7 +2001,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -2124,6 +2043,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2131,6 +2051,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </li>
@@ -2139,6 +2060,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">end_at</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">event_data</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">events_count</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">ext_data</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">object_class</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2187,7 +2109,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">coordinates</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong class="first">dvr_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">dvr_protected</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -2230,6 +2151,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2237,6 +2159,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">user_attributes</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong class="first">comment</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">favorite</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">motion_alarm</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </li>
@@ -2245,6 +2168,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">end_at</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">event_data</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">events_count</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">ext_data</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">object_class</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2275,8 +2199,8 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -2323,8 +2247,8 @@ only cameras visible to specified user with reduced set of fields.</p>
 <tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first">
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -2333,8 +2257,8 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -2379,8 +2303,8 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">cameras</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
 </td>
 </tr>
@@ -2670,7 +2594,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">global_anonymous_access</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">global_auth_backend</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_dashboard_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">global_demo_access</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">global_dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">global_ga_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_homepage</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_homepage_guest</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_serial_binding_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -2715,7 +2641,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">global_anonymous_access</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">global_auth_backend</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_dashboard_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">global_demo_access</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">global_dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">global_ga_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_homepage</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_homepage_guest</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_serial_binding_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -2774,7 +2702,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">global_anonymous_access</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">global_auth_backend</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_dashboard_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">global_demo_access</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">global_dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">global_ga_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_homepage</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_homepage_guest</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">global_serial_binding_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
@@ -2917,6 +2847,272 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="event-notifications">
+<h2>Event Notifications<a class="headerlink" href="#event-notifications" title="Permalink to this headline">¶</a></h2>
+<dl class="post">
+<dt id="post--vsaas-api-v2-my-subscriptions-camera_motion">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/my/subscriptions/camera_motion</code><a class="headerlink" href="#post--vsaas-api-v2-my-subscriptions-camera_motion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upserts a new event subscription</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">hostname</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--vsaas-api-v2-my-subscriptions">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/my/subscriptions</code><a class="headerlink" href="#post--vsaas-api-v2-my-subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upserts a new event subscription</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">hostname</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-my-subscriptions">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/my/subscriptions</code><a class="headerlink" href="#get--vsaas-api-v2-my-subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of event subscriptions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Array:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">hostname</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--vsaas-api-v2-my-device-tokens">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/my/device-tokens</code><a class="headerlink" href="#post--vsaas-api-v2-my-device-tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upserts a new device token</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first">
+<li><strong class="first">device_platform</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_version</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">device_platform</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_version</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">events_pending</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">events_sent</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">last_confirm_at</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-my-device-tokens">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/my/device-tokens</code><a class="headerlink" href="#get--vsaas-api-v2-my-device-tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of device tokens</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Array:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">device_platform</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_version</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">events_pending</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">events_sent</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">last_confirm_at</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-my-subscriptions-camera_motion-(path-camera_id)">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/my/subscriptions/camera_motion/</code><span class="sig-paren">(</span><em class="property">path: </em><em>camera_id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-my-subscriptions-camera_motion-(path-camera_id)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="post">
+<dt id="post--vsaas-api-v2-my-device-tokens-(string-token)-confirm">
+<code class="descname">POST </code><code class="descname">/vsaas/api/v2/my/device-tokens/</code><span class="sig-paren">(</span><em class="property">string: </em><em>token</em><span class="sig-paren">)</span><code class="descname">/confirm</code><a class="headerlink" href="#post--vsaas-api-v2-my-device-tokens-(string-token)-confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should be called by a device when notification is received</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request Headers:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><em>X-Vsaas-Session string</em> &#8211; User&#8217;s session key</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>token</strong> (<em>string</em>) &#8211; Device token to confirm</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-my-subscriptions-(int-id)">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/my/subscriptions/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-my-subscriptions-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-my-subscriptions-(int-id)">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/my/subscriptions/</code><span class="sig-paren">(</span><em class="property">int: </em><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-my-subscriptions-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an event subscription info</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>string</em>) &#8211; Subscription id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong class="first">title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</li>
+<li><strong class="first">id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong class="first">hostname</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">id</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="delete">
+<dt id="delete--vsaas-api-v2-my-device-tokens-(string-token)">
+<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/my/device-tokens/</code><span class="sig-paren">(</span><em class="property">string: </em><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-my-device-tokens-(string-token)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="get">
+<dt id="get--vsaas-api-v2-my-device-tokens-(string-token)">
+<code class="descname">GET </code><code class="descname">/vsaas/api/v2/my/device-tokens/</code><span class="sig-paren">(</span><em class="property">string: </em><em>token</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-my-device-tokens-(string-token)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a device token info</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
+<li><strong class="first">device_platform</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">token</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">device_version</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong class="first">events_pending</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">events_sent</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong class="first">last_confirm_at</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -2973,16 +3169,11 @@ only cameras visible to specified user with reduced set of fields.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
 
