@@ -690,6 +690,7 @@ Used as an integration point with a custom service</p>
 <tr class="field-even field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
 <li><strong class="first">groups_count</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong class="first">is_logged_in</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">notification_email</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">session</strong><span> (</span><em>string</em><span>)</span></li>
@@ -703,68 +704,6 @@ Used as an integration point with a custom service</p>
 </div>
 <div class="section" id="camera-management">
 <h2>Camera Management<a class="headerlink" href="#camera-management" title="Permalink to this headline">¶</a></h2>
-<dl class="put">
-<dt id="put--vsaas-api-v2-cameras-discover">
-<code class="descname">PUT </code><code class="descname">/vsaas/api/v2/cameras/discover</code><a class="headerlink" href="#put--vsaas-api-v2-cameras-discover" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start cameras discovering</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">address</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">password</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="delete">
-<dt id="delete--vsaas-api-v2-cameras-discover">
-<code class="descname">DELETE </code><code class="descname">/vsaas/api/v2/cameras/discover</code><a class="headerlink" href="#delete--vsaas-api-v2-cameras-discover" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop cameras discovering</p>
-</dd></dl>
-
-<dl class="get">
-<dt id="get--vsaas-api-v2-cameras-discover">
-<code class="descname">GET </code><code class="descname">/vsaas/api/v2/cameras/discover</code><a class="headerlink" href="#get--vsaas-api-v2-cameras-discover" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of discovered cameras.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Response JSON Object Aray:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last">
-<li><strong class="first">bitrate</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">capabilities</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">codec</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">endpoint</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">error</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">fps</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">height</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">jpeg_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">manufacturer</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">model</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">name</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">net</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">onvif</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">profile</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">profile_name</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">ptz</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">width</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="post">
 <dt id="post--vsaas-api-v2-cameras-import">
 <code class="descname">POST </code><code class="descname">/vsaas/api/v2/cameras/import</code><a class="headerlink" href="#post--vsaas-api-v2-cameras-import" title="Permalink to this definition">¶</a></dt>
@@ -808,7 +747,6 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -854,7 +792,6 @@ Used as an integration point with a custom service</p>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -949,7 +886,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1092,7 +1028,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong class="first">server</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">static</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1198,7 +1133,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1438,7 +1372,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1548,7 +1481,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1645,7 +1577,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2043,7 +1974,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2151,7 +2081,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </ul>
 </li>
 <li><strong class="first">stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong class="first">streamer_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">substream_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong class="first">thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong class="first">thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
