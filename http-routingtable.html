@@ -20,20 +20,11 @@
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: ''
-          };
-      </script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -42,6 +33,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
  
 
     <script type="text/javascript">
@@ -161,8 +154,8 @@
    <a href="#cap-/vsaas"><strong>/vsaas</strong></a>
    </div>
 
-   <table class="indextable modindextable" cellspacing="0" cellpadding="2">
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-/vsaas"><td></td><td>
        <strong>/vsaas</strong></td><td></td></tr>
      <tr>
@@ -183,32 +176,17 @@
      <tr>
        <td></td>
        <td>
+       <a href="api.html#get--vsaas-api-v2-domains-(int-domain_id)-organizations"><code class="xref">GET /vsaas/api/v2/domains/(int:domain_id)/organizations</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)"><code class="xref">GET /vsaas/api/v2/domains/(int:domain_id)/organizations/(int:organization_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
        <a href="api.html#get--vsaas-api-v2-events"><code class="xref">GET /vsaas/api/v2/events</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#get--vsaas-api-v2-groups"><code class="xref">GET /vsaas/api/v2/groups</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#get--vsaas-api-v2-groups-(int-group_id)-cameras"><code class="xref">GET /vsaas/api/v2/groups/(int:group_id)/cameras</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#get--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)"><code class="xref">GET /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#get--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)"><code class="xref">GET /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#get--vsaas-api-v2-groups-(int-id)"><code class="xref">GET /vsaas/api/v2/groups/(int:id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
@@ -219,6 +197,56 @@
        <td></td>
        <td>
        <a href="api.html#get--vsaas-api-v2-mosaics-(int-mosaic_id)"><code class="xref">GET /vsaas/api/v2/mosaics/(int:mosaic_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-my-device-tokens"><code class="xref">GET /vsaas/api/v2/my/device-tokens</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-my-device-tokens-(string-token)"><code class="xref">GET /vsaas/api/v2/my/device-tokens/(string:token)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-my-subscriptions"><code class="xref">GET /vsaas/api/v2/my/subscriptions</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-my-subscriptions-(int-id)"><code class="xref">GET /vsaas/api/v2/my/subscriptions/(int:id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-organizations"><code class="xref">GET /vsaas/api/v2/organizations</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-organizations-(int-organization_id)"><code class="xref">GET /vsaas/api/v2/organizations/(int:organization_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-organizations-(int-organization_id)-folders"><code class="xref">GET /vsaas/api/v2/organizations/(int:organization_id)/folders</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)"><code class="xref">GET /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users"><code class="xref">GET /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)/users</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)"><code class="xref">GET /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)/users/(int:user_id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
@@ -298,32 +326,57 @@
      <tr>
        <td></td>
        <td>
+       <a href="api.html#post--vsaas-api-v2-domains-(int-domain_id)-organizations"><code class="xref">POST /vsaas/api/v2/domains/(int:domain_id)/organizations</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
        <a href="api.html#post--vsaas-api-v2-events"><code class="xref">POST /vsaas/api/v2/events</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="api.html#post--vsaas-api-v2-groups"><code class="xref">POST /vsaas/api/v2/groups</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#post--vsaas-api-v2-groups-(int-group_id)-cameras"><code class="xref">POST /vsaas/api/v2/groups/(int:group_id)/cameras</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#post--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)-order"><code class="xref">POST /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)/order</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#post--vsaas-api-v2-groups-(int-group_id)-users"><code class="xref">POST /vsaas/api/v2/groups/(int:group_id)/users</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
        <a href="api.html#post--vsaas-api-v2-mosaics"><code class="xref">POST /vsaas/api/v2/mosaics</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-my-device-tokens"><code class="xref">POST /vsaas/api/v2/my/device-tokens</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-my-device-tokens-(string-token)-confirm"><code class="xref">POST /vsaas/api/v2/my/device-tokens/(string:token)/confirm</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-my-subscriptions"><code class="xref">POST /vsaas/api/v2/my/subscriptions</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-my-subscriptions-camera_motion"><code class="xref">POST /vsaas/api/v2/my/subscriptions/camera_motion</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-notifications"><code class="xref">POST /vsaas/api/v2/notifications</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-organizations"><code class="xref">POST /vsaas/api/v2/organizations</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-organizations-(int-organization_id)-folders"><code class="xref">POST /vsaas/api/v2/organizations/(int:organization_id)/folders</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#post--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users"><code class="xref">POST /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)/users</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
@@ -363,22 +416,27 @@
      <tr>
        <td></td>
        <td>
-       <a href="api.html#put--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)"><code class="xref">PUT /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#put--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)"><code class="xref">PUT /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#put--vsaas-api-v2-groups-(int-id)"><code class="xref">PUT /vsaas/api/v2/groups/(int:id)</code></a></td><td>
+       <a href="api.html#put--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)"><code class="xref">PUT /vsaas/api/v2/domains/(int:domain_id)/organizations/(int:organization_id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="api.html#put--vsaas-api-v2-mosaics-(int-mosaic_id)"><code class="xref">PUT /vsaas/api/v2/mosaics/(int:mosaic_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#put--vsaas-api-v2-organizations-(int-organization_id)"><code class="xref">PUT /vsaas/api/v2/organizations/(int:organization_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#put--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)"><code class="xref">PUT /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#put--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)"><code class="xref">PUT /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)/users/(int:user_id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
@@ -408,22 +466,27 @@
      <tr>
        <td></td>
        <td>
-       <a href="api.html#delete--vsaas-api-v2-groups-(int-group_id)-cameras-(path-name)"><code class="xref">DELETE /vsaas/api/v2/groups/(int:group_id)/cameras/(path:name)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#delete--vsaas-api-v2-groups-(int-group_id)-users-(int-user_id)"><code class="xref">DELETE /vsaas/api/v2/groups/(int:group_id)/users/(int:user_id)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api.html#delete--vsaas-api-v2-groups-(int-id)"><code class="xref">DELETE /vsaas/api/v2/groups/(int:id)</code></a></td><td>
+       <a href="api.html#delete--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)"><code class="xref">DELETE /vsaas/api/v2/domains/(int:domain_id)/organizations/(int:organization_id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="api.html#delete--vsaas-api-v2-mosaics-(int-mosaic_id)"><code class="xref">DELETE /vsaas/api/v2/mosaics/(int:mosaic_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#delete--vsaas-api-v2-organizations-(int-organization_id)"><code class="xref">DELETE /vsaas/api/v2/organizations/(int:organization_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#delete--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)"><code class="xref">DELETE /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="api.html#delete--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)"><code class="xref">DELETE /vsaas/api/v2/organizations/(int:organization_id)/folders/(int:folder_id)/users/(int:user_id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
