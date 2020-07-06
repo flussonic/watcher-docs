@@ -363,6 +363,72 @@ Used as an integration point with a custom service</p>
 </div>
 <div class="section" id="cameras">
 <h2>Cameras<a class="headerlink" href="#cameras" title="Permalink to this headline">¶</a></h2>
+<dl class="http post">
+<dt id="post--vsaas-api-v2-cameras">
+<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/cameras</code><a class="headerlink" href="#post--vsaas-api-v2-cameras" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a camera</p>
+<dl class="field-list">
+<dt class="field-odd">Request JSON Object</dt>
+<dd class="field-odd"><ul>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong>agent_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>agent_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>agent_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>comment</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>extrenal_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>folder_coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>folder_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>group_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>last_change</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>created_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>object_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>object_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>user</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>last_event_time</strong><span> (</span><em>int</em><span>)</span></li>
+<li><strong>motion_detector_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>postal_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>preset</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>domain_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_adjustable</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>is_default</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>is_deleted</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>vision_params</strong><span> (</span><em>None</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>preset_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>static</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>stream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>substream_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+<li><strong>video_only</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Do not use audio track</span></li>
+<li><strong>vision_areas</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>vision_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>vision_gpu</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="http get">
 <dt id="get--vsaas-api-v2-cameras">
 <code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/cameras</code><a class="headerlink" href="#get--vsaas-api-v2-cameras" title="Permalink to this definition">¶</a></dt>
@@ -477,14 +543,13 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-<dl class="http post">
-<dt id="post--vsaas-api-v2-cameras">
-<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/cameras</code><a class="headerlink" href="#post--vsaas-api-v2-cameras" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a camera</p>
+<dl class="http put">
+<dt id="put--vsaas-api-v2-cameras-(path-name)">
+<code class="sig-name descname">PUT </code><code class="sig-name descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change camera</p>
 <dl class="field-list">
 <dt class="field-odd">Request JSON Object</dt>
 <dd class="field-odd"><ul>
-<li><strong>name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
 <li><strong>agent_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>agent_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>agent_model</strong><span> (</span><em>string</em><span>)</span></li>
@@ -538,6 +603,24 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong>vision_areas</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>vision_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong>vision_gpu</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+<dt class="field-even">Query Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – Camera name</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http delete">
+<dt id="delete--vsaas-api-v2-cameras-(path-name)">
+<code class="sig-name descname">DELETE </code><code class="sig-name descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes camera</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – Camera name</p></li>
 </ul>
 </dd>
 </dl>
@@ -644,89 +727,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd>
 <dt class="field-even">Query Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>name</strong> (<em>string</em>) – Camera name</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http put">
-<dt id="put--vsaas-api-v2-cameras-(path-name)">
-<code class="sig-name descname">PUT </code><code class="sig-name descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change camera</p>
-<dl class="field-list">
-<dt class="field-odd">Request JSON Object</dt>
-<dd class="field-odd"><ul>
-<li><strong>agent_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>agent_key</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>agent_model</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>agent_serial</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>comment</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>coordinates</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>extrenal_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>folder_coordinates</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>folder_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>group_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>last_change</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>created_at</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>object_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>object_type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>user</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</li>
-<li><strong>last_event_time</strong><span> (</span><em>int</em><span>)</span></li>
-<li><strong>motion_detector_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>onvif_profile</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>onvif_ptz</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>onvif_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>postal_address</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>preset</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>domain_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>is_adjustable</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>is_default</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>is_deleted</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>vision_params</strong><span> (</span><em>None</em><span>)</span></li>
-</ul>
-</li>
-<li><strong>preset_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>static</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>stream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>substream_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>thumbnails</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>thumbnails_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
-<li><strong>video_only</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Do not use audio track</span></li>
-<li><strong>vision_areas</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>vision_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>vision_gpu</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</dd>
-<dt class="field-even">Query Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>name</strong> (<em>string</em>) – Camera name</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http delete">
-<dt id="delete--vsaas-api-v2-cameras-(path-name)">
-<code class="sig-name descname">DELETE </code><code class="sig-name descname">/vsaas/api/v2/cameras/</code><span class="sig-paren">(</span><em class="property">path: </em><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-cameras-(path-name)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes camera</p>
-<dl class="field-list simple">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>string</em>) – Camera name</p></li>
 </ul>
 </dd>
@@ -854,39 +854,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </div>
 <div class="section" id="users">
 <h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
-<dl class="http get">
-<dt id="get--vsaas-api-v2-users">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/users</code><a class="headerlink" href="#get--vsaas-api-v2-users" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a user list</p>
-<dl class="field-list">
-<dt class="field-odd">Response JSON Object Array</dt>
-<dd class="field-odd"><ul>
-<li><strong>login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>apikey</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>can_edit_organizations</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>can_edit_settings</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>can_view_organizations</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>domain_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>external_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>locale</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>max_sessions</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>monitoring</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>note</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>notification_email</strong><span> (</span><em>string (email)</em><span>)</span></li>
-<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>organizations</strong><span> (</span><em>list</em><span>)</span></li>
-<li><strong>password</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>phone</strong><span> (</span><em>string</em><span>)</span></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="http post">
 <dt id="post--vsaas-api-v2-users">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/users</code><a class="headerlink" href="#post--vsaas-api-v2-users" title="Permalink to this definition">¶</a></dt>
@@ -925,17 +892,12 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-users-(int-id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-users-(int-id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single user</p>
+<dt id="get--vsaas-api-v2-users">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/users</code><a class="headerlink" href="#get--vsaas-api-v2-users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a user list</p>
 <dl class="field-list">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>id</strong> (<em>integer</em>) – User identifier</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul>
+<dt class="field-odd">Response JSON Object Array</dt>
+<dd class="field-odd"><ul>
 <li><strong>login</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>apikey</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
@@ -1022,6 +984,44 @@ only cameras visible to specified user with reduced set of fields.</p>
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>id</strong> (<em>integer</em>) – User identifier</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-users-(int-id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-users-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single user</p>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>integer</em>) – User identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>login</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>apikey</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>authorized_ip</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>can_edit_organizations</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>can_edit_settings</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>can_view_organizations</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>domain_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_admin</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>locale</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>max_sessions</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>monitoring</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>note</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>notification_email</strong><span> (</span><em>string (email)</em><span>)</span></li>
+<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>organizations</strong><span> (</span><em>list</em><span>)</span></li>
+<li><strong>password</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>phone</strong><span> (</span><em>string</em><span>)</span></li>
 </ul>
 </dd>
 </dl>
@@ -1169,47 +1169,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </div>
 <div class="section" id="organizations">
 <h2>Organizations<a class="headerlink" href="#organizations" title="Permalink to this headline">¶</a></h2>
-<dl class="http get">
-<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations</code><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="http get">
-<dt id="get--vsaas-api-v2-organizations">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations</code><a class="headerlink" href="#get--vsaas-api-v2-organizations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of domain organizations</p>
-<dl class="field-list">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>domain_id</strong> (<em>integer</em>) – Domain identifier</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object Array</dt>
-<dd class="field-even"><ul>
-<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>camera_limit</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>can_edit_cameras</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>can_edit_users</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>can_view_stats</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>dvr_limit</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>is_default</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>is_member</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>mosaic_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>owner</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>login</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</li>
-<li><strong>owner_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>user_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>user_limit</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="http post">
 <dt id="post--vsaas-api-v2-domains-(int-domain_id)-organizations">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations</code><a class="headerlink" href="#post--vsaas-api-v2-domains-(int-domain_id)-organizations" title="Permalink to this definition">¶</a></dt>
@@ -1238,22 +1197,21 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)" title="Permalink to this definition">¶</a></dt>
+<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations</code><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single organization</p>
+<dt id="get--vsaas-api-v2-organizations">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations</code><a class="headerlink" href="#get--vsaas-api-v2-organizations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of domain organizations</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>domain_id</strong> (<em>integer</em>) – Domain identifier</p></li>
-<li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Object</dt>
+<dt class="field-even">Response JSON Object Array</dt>
 <dd class="field-even"><ul>
 <li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1341,44 +1299,51 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="folders">
-<h2>Folders<a class="headerlink" href="#folders" title="Permalink to this headline">¶</a></h2>
 <dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders</code><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of folders in a specified organization</p>
+<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single organization</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_id</strong> (<em>integer</em>) – Domain identifier</p></li>
 <li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Object Array</dt>
+<dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>parent_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>coordinates</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>level</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>map_bottomleft</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_file</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
-<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
-<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
-<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
+<li><strong>camera_limit</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>can_edit_cameras</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>can_edit_users</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>can_view_stats</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>dvr_limit</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_default</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>is_member</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>mosaic_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>owner</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>login</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </li>
-<li><strong>map_topleft</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_topright</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>order_num</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>owner_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>user_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>user_limit</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="folders">
+<h2>Folders<a class="headerlink" href="#folders" title="Permalink to this headline">¶</a></h2>
 <dl class="http post">
 <dt id="post--vsaas-api-v2-organizations-(int-organization_id)-folders">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders</code><a class="headerlink" href="#post--vsaas-api-v2-organizations-(int-organization_id)-folders" title="Permalink to this definition">¶</a></dt>
@@ -1413,14 +1378,13 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">folder_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns specified folder</p>
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders</code><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of folders in a specified organization</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
-<li><p><strong>folder_id</strong> (<em>integer</em>) – Folder identifier</p></li>
 </ul>
 </dd>
 <dt class="field-even">Response JSON Object Array</dt>
@@ -1522,9 +1486,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">folder_id</em><span class="sig-paren">)</span><code class="sig-name descname">/users</code><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of users who has access to a specified folder</p>
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">folder_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns specified folder</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1534,9 +1498,24 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd>
 <dt class="field-even">Response JSON Object Array</dt>
 <dd class="field-even"><ul>
-<li><strong>user_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>can_use_ptz</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>can_view_dvr</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>parent_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>camera_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>coordinates</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>level</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>map_bottomleft</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_file</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
+<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
+<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
+<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
+</ul>
+</li>
+<li><strong>map_topleft</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_topright</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>order_num</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </dd>
 </dl>
@@ -1571,18 +1550,17 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">folder_id</em><span class="sig-paren">)</span><code class="sig-name descname">/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns permissions in a specified folder</p>
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">folder_id</em><span class="sig-paren">)</span><code class="sig-name descname">/users</code><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of users who has access to a specified folder</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
 <li><p><strong>folder_id</strong> (<em>integer</em>) – Folder identifier</p></li>
-<li><p><strong>user_id</strong> (<em>integer</em>) – User identifier</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Object</dt>
+<dt class="field-even">Response JSON Object Array</dt>
 <dd class="field-even"><ul>
 <li><strong>user_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>can_use_ptz</strong><span> (</span><em>bool</em><span>)</span></li>
@@ -1643,45 +1621,31 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="presets">
-<h2>Presets<a class="headerlink" href="#presets" title="Permalink to this headline">¶</a></h2>
 <dl class="http get">
-<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-presets">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-presets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns preset list linked to the organization</p>
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/folders/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">folder_id</em><span class="sig-paren">)</span><code class="sig-name descname">/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">user_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-folders-(int-folder_id)-users-(int-user_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns permissions in a specified folder</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
+<li><p><strong>folder_id</strong> (<em>integer</em>) – Folder identifier</p></li>
+<li><p><strong>user_id</strong> (<em>integer</em>) – User identifier</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Object Array</dt>
+<dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul>
-<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>preset_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>is_deleted</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>preset</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>is_adjustable</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>vision_params</strong><span> (</span><em>None</em><span>)</span></li>
-</ul>
-</li>
+<li><strong>user_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>can_use_ptz</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>can_view_dvr</strong><span> (</span><em>bool</em><span>)</span></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="presets">
+<h2>Presets<a class="headerlink" href="#presets" title="Permalink to this headline">¶</a></h2>
 <dl class="http post">
 <dt id="post--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#post--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets" title="Permalink to this definition">¶</a></dt>
@@ -1737,18 +1701,17 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets-(int-preset_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
+<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-presets-(int-preset_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns preset linked to the organization</p>
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-presets">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-presets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns preset list linked to the organization</p>
 <dl class="field-list">
 <dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>preset_id</strong> (<em>integer</em>) – Preset identifier</p></li>
 <li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
 </ul>
 </dd>
@@ -1793,26 +1756,37 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-domains-(int-domain_id)-presets">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-presets" title="Permalink to this definition">¶</a></dt>
+<dt id="get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets-(int-preset_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-organizations-(int-organization_id)-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-presets">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/presets</code><a class="headerlink" href="#get--vsaas-api-v2-presets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns preset list</p>
+<dt id="get--vsaas-api-v2-organizations-(int-organization_id)-presets-(int-preset_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/organizations/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">organization_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-organizations-(int-organization_id)-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns preset linked to the organization</p>
 <dl class="field-list">
-<dt class="field-odd">Response JSON Object Array</dt>
-<dd class="field-odd"><ul>
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preset_id</strong> (<em>integer</em>) – Preset identifier</p></li>
+<li><p><strong>organization_id</strong> (<em>integer</em>) – Organization identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object Array</dt>
+<dd class="field-even"><ul>
+<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>preset_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_deleted</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>preset</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>is_adjustable</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>is_default</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>is_deleted</strong><span> (</span><em>boolean</em><span>)</span></li>
 <li><strong>vision_params</strong><span> (</span><em>None</em><span>)</span></li>
+</ul>
+</li>
 </ul>
 </dd>
 </dl>
@@ -1857,22 +1831,17 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-domains-(int-domain_id)-presets-(int-preset_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
+<dt id="get--vsaas-api-v2-domains-(int-domain_id)-presets">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets</code><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-presets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-presets-(int-preset_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns preset</p>
+<dt id="get--vsaas-api-v2-presets">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/presets</code><a class="headerlink" href="#get--vsaas-api-v2-presets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns preset list</p>
 <dl class="field-list">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>preset_id</strong> (<em>integer</em>) – Preset identifier</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul>
+<dt class="field-odd">Response JSON Object Array</dt>
+<dd class="field-odd"><ul>
 <li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -1948,33 +1917,40 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="events">
-<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
 <dl class="http get">
-<dt id="get--vsaas-api-v2-events">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/events</code><a class="headerlink" href="#get--vsaas-api-v2-events" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of events</p>
+<dt id="get--vsaas-api-v2-domains-(int-domain_id)-presets-(int-preset_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/domains/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">domain_id</em><span class="sig-paren">)</span><code class="sig-name descname">/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-domains-(int-domain_id)-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-presets-(int-preset_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/presets/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">preset_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-presets-(int-preset_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns preset</p>
 <dl class="field-list">
-<dt class="field-odd">Response JSON Object Array</dt>
-<dd class="field-odd"><ul>
-<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>end_at</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>events_count</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>has_preview</strong><span> (</span><em>bool</em><span>)</span></li>
-<li><strong>id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>object_action</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>object_class</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>object_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>source</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>source_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>start_at</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>type</strong><span> (</span><em>string</em><span>)</span></li>
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preset_id</strong> (<em>integer</em>) – Preset identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>dvr_depth</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>dvr_lock_days</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>dvr_space</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_adjustable</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>is_default</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>is_deleted</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>vision_params</strong><span> (</span><em>None</em><span>)</span></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
 <dl class="http post">
 <dt id="post--vsaas-api-v2-events">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/events</code><a class="headerlink" href="#post--vsaas-api-v2-events" title="Permalink to this definition">¶</a></dt>
@@ -2004,11 +1980,11 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-events-(string-event_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/events/</code><span class="sig-paren">(</span><em class="property">string: </em><em class="sig-param">event_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-events-(string-event_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns an event</p>
+<dt id="get--vsaas-api-v2-events">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/events</code><a class="headerlink" href="#get--vsaas-api-v2-events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of events</p>
 <dl class="field-list">
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">Response JSON Object Array</dt>
 <dd class="field-odd"><ul>
 <li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>end_at</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -2040,6 +2016,30 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd>
 <dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul>
+<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>end_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>events_count</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>has_preview</strong><span> (</span><em>bool</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>object_action</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>object_class</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>object_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>source</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>source_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>start_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>type</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-events-(string-event_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/events/</code><span class="sig-paren">(</span><em class="property">string: </em><em class="sig-param">event_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-events-(string-event_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an event</p>
+<dl class="field-list">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul>
 <li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>end_at</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>events_count</strong><span> (</span><em>integer</em><span>)</span></li>
@@ -2096,23 +2096,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-<dl class="http get">
-<dt id="get--vsaas-api-v2-events-csv">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/events/csv</code><a class="headerlink" href="#get--vsaas-api-v2-events-csv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of events in csv format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>utc_from</strong> – int - return events that accured after this timestamp</p></li>
-<li><p><strong>utc_to</strong> – int - return events that accured before this timestamp</p></li>
-<li><p><strong>type</strong> – [motion, offline, activity] - type of event</p></li>
-<li><p><strong>camera</strong> – show only camera-related events (‘motion’, ‘activity’)</p></li>
-<li><p><strong>camera_id</strong> – filter events by camera_id</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="http post">
 <dt id="post--vsaas-api-v2-events-csv">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/events/csv</code><a class="headerlink" href="#post--vsaas-api-v2-events-csv" title="Permalink to this definition">¶</a></dt>
@@ -2141,33 +2124,26 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="custom-notifications">
-<h2>Custom notifications<a class="headerlink" href="#custom-notifications" title="Permalink to this headline">¶</a></h2>
 <dl class="http get">
-<dt id="get--vsaas-api-v2-my-device-tokens">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/my/device-tokens</code><a class="headerlink" href="#get--vsaas-api-v2-my-device-tokens" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="http get">
-<dt id="get--vsaas-api-v2-profile-device-tokens">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/profile/device-tokens</code><a class="headerlink" href="#get--vsaas-api-v2-profile-device-tokens" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of device tokens</p>
-<dl class="field-list">
-<dt class="field-odd">Response JSON Object Array</dt>
-<dd class="field-odd"><ul>
-<li><strong>device_platform</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>token</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>device_model</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>device_version</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>events_pending</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>events_sent</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>last_confirm_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<dt id="get--vsaas-api-v2-events-csv">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/events/csv</code><a class="headerlink" href="#get--vsaas-api-v2-events-csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of events in csv format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>utc_from</strong> – int - return events that accured after this timestamp</p></li>
+<li><p><strong>utc_to</strong> – int - return events that accured before this timestamp</p></li>
+<li><p><strong>type</strong> – [motion, offline, activity] - type of event</p></li>
+<li><p><strong>camera</strong> – show only camera-related events (‘motion’, ‘activity’)</p></li>
+<li><p><strong>camera_id</strong> – filter events by camera_id</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="custom-notifications">
+<h2>Custom notifications<a class="headerlink" href="#custom-notifications" title="Permalink to this headline">¶</a></h2>
 <dl class="http post">
 <dt id="post--vsaas-api-v2-my-device-tokens">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/my/device-tokens</code><a class="headerlink" href="#post--vsaas-api-v2-my-device-tokens" title="Permalink to this definition">¶</a></dt>
@@ -2188,6 +2164,30 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd>
 <dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul>
+<li><strong>device_platform</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>token</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>device_model</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>device_version</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>events_pending</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>events_sent</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>last_confirm_at</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-my-device-tokens">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/my/device-tokens</code><a class="headerlink" href="#get--vsaas-api-v2-my-device-tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-profile-device-tokens">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/profile/device-tokens</code><a class="headerlink" href="#get--vsaas-api-v2-profile-device-tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of device tokens</p>
+<dl class="field-list">
+<dt class="field-odd">Response JSON Object Array</dt>
+<dd class="field-odd"><ul>
 <li><strong>device_platform</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>token</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>device_model</strong><span> (</span><em>string</em><span>)</span></li>
@@ -2247,6 +2247,49 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
+<dl class="http post">
+<dt id="post--vsaas-api-v2-my-subscriptions">
+<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/my/subscriptions</code><a class="headerlink" href="#post--vsaas-api-v2-my-subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="http post">
+<dt id="post--vsaas-api-v2-profile-subscriptions">
+<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/profile/subscriptions</code><a class="headerlink" href="#post--vsaas-api-v2-profile-subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upserts a new event subscription</p>
+<dl class="field-list">
+<dt class="field-odd">Request JSON Object</dt>
+<dd class="field-odd"><ul>
+<li><strong>event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>notify_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>event_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>notification_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>camera</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
+<li><strong>title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
+</ul>
+</li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>notify_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="http get">
 <dt id="get--vsaas-api-v2-my-subscriptions">
 <code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/my/subscriptions</code><a class="headerlink" href="#get--vsaas-api-v2-my-subscriptions" title="Permalink to this definition">¶</a></dt>
@@ -2268,48 +2311,10 @@ only cameras visible to specified user with reduced set of fields.</p>
 </li>
 <li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>notify_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul class="simple">
-</ul>
-</li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http post">
-<dt id="post--vsaas-api-v2-my-subscriptions">
-<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/my/subscriptions</code><a class="headerlink" href="#post--vsaas-api-v2-my-subscriptions" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="http post">
-<dt id="post--vsaas-api-v2-profile-subscriptions">
-<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/profile/subscriptions</code><a class="headerlink" href="#post--vsaas-api-v2-profile-subscriptions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a new event subscription</p>
-<dl class="field-list">
-<dt class="field-odd">Request JSON Object</dt>
-<dd class="field-odd"><ul>
-<li><strong>event_type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>notification_type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul>
-<li><strong>event_type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>notification_type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>camera</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>name</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Stream identifier</span></li>
-<li><strong>title</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Human readable title</span></li>
-</ul>
-</li>
+<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul>
 <li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -2343,8 +2348,10 @@ only cameras visible to specified user with reduced set of fields.</p>
 </li>
 <li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>notify_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul class="simple">
+<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </li>
 </ul>
@@ -2367,6 +2374,7 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong>notification_type</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>notify_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>streamer_id</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
@@ -2382,8 +2390,10 @@ only cameras visible to specified user with reduced set of fields.</p>
 </li>
 <li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>last_event_at</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>notify_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>send_timeout</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul class="simple">
+<li><strong>streamer</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 </ul>
 </li>
 </ul>
@@ -2409,22 +2419,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </div>
 <div class="section" id="mosaics">
 <h2>Mosaics<a class="headerlink" href="#mosaics" title="Permalink to this headline">¶</a></h2>
-<dl class="http get">
-<dt id="get--vsaas-api-v2-mosaics">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/mosaics</code><a class="headerlink" href="#get--vsaas-api-v2-mosaics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of mosaics</p>
-<dl class="field-list">
-<dt class="field-odd">Response JSON Object Array</dt>
-<dd class="field-odd"><ul>
-<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>visible</strong><span> (</span><em>boolean</em><span>)</span></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="http post">
 <dt id="post--vsaas-api-v2-mosaics">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/mosaics</code><a class="headerlink" href="#post--vsaas-api-v2-mosaics" title="Permalink to this definition">¶</a></dt>
@@ -2443,22 +2437,15 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-mosaics-(int-mosaic_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/mosaics/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">mosaic_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-mosaics-(int-mosaic_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single mosaic</p>
+<dt id="get--vsaas-api-v2-mosaics">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/mosaics</code><a class="headerlink" href="#get--vsaas-api-v2-mosaics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of mosaics</p>
 <dl class="field-list">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mosaic_id</strong> (<em>integer</em>) – Mosaic identifier</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul>
+<dt class="field-odd">Response JSON Object Array</dt>
+<dd class="field-odd"><ul>
 <li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>cameras</strong><span> (</span><em></em><span>)</span><span>: </span><span>list of Camera objects</span></li>
-<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
 </dd>
@@ -2510,37 +2497,32 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="streamers">
-<h2>Streamers<a class="headerlink" href="#streamers" title="Permalink to this headline">¶</a></h2>
 <dl class="http get">
-<dt id="get--vsaas-api-v2-streamers">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/streamers</code><a class="headerlink" href="#get--vsaas-api-v2-streamers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns list of streamers</p>
+<dt id="get--vsaas-api-v2-mosaics-(int-mosaic_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/mosaics/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">mosaic_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-mosaics-(int-mosaic_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single mosaic</p>
 <dl class="field-list">
-<dt class="field-odd">Response JSON Object Array</dt>
-<dd class="field-odd"><ul>
-<li><strong>api_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>auth</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>cluster_key</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>max_bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>public_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>server_status</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>error</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>http_port</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>https_port</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>is_remote</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>load</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>uptime</strong><span> (</span><em>integer</em><span>)</span></li>
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mosaic_id</strong> (<em>integer</em>) – Mosaic identifier</p></li>
 </ul>
-</li>
-<li><strong>server_warnings</strong><span> (</span><em>array</em><span>)</span></li>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>title</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>cameras</strong><span> (</span><em></em><span>)</span><span>: </span><span>list of Camera objects</span></li>
+<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>visible</strong><span> (</span><em>boolean</em><span>)</span></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="streamers">
+<h2>Streamers<a class="headerlink" href="#streamers" title="Permalink to this headline">¶</a></h2>
 <dl class="http post">
 <dt id="post--vsaas-api-v2-streamers">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/streamers</code><a class="headerlink" href="#post--vsaas-api-v2-streamers" title="Permalink to this definition">¶</a></dt>
@@ -2556,21 +2538,20 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd></dl>
 
 <dl class="http get">
-<dt id="get--vsaas-api-v2-streamers-(int-streamer_id)">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/streamers/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">streamer_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-streamers-(int-streamer_id)" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single streamer</p>
+<dt id="get--vsaas-api-v2-streamers">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/streamers</code><a class="headerlink" href="#get--vsaas-api-v2-streamers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of streamers</p>
 <dl class="field-list">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>streamer_id</strong> (<em>integer</em>) – Streamer identifier</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul>
+<dt class="field-odd">Response JSON Object Array</dt>
+<dd class="field-odd"><ul>
 <li><strong>api_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>auth</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>cluster_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>has_analytics</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>has_dvr_storage</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_local</strong><span> (</span><em>field</em><span>)</span></li>
 <li><strong>max_bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>public_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>server_status</strong><span> (</span><em>object</em><span>)</span><ul>
@@ -2604,6 +2585,9 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong>auth</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>cluster_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>has_analytics</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>has_dvr_storage</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>is_local</strong><span> (</span><em>field</em><span>)</span></li>
 <li><strong>max_bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>public_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>server_warnings</strong><span> (</span><em>array</em><span>)</span></li>
@@ -2615,6 +2599,10 @@ only cameras visible to specified user with reduced set of fields.</p>
 <li><strong>auth</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>cluster_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>has_analytics</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>has_dvr_storage</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_local</strong><span> (</span><em>field</em><span>)</span></li>
 <li><strong>max_bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
 <li><strong>public_url</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>server_status</strong><span> (</span><em>object</em><span>)</span><ul>
@@ -2645,6 +2633,43 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dl>
 </dd></dl>
 
+<dl class="http get">
+<dt id="get--vsaas-api-v2-streamers-(int-streamer_id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/streamers/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">streamer_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-streamers-(int-streamer_id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single streamer</p>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>streamer_id</strong> (<em>integer</em>) – Streamer identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>api_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>auth</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>cluster_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>has_analytics</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>has_dvr_storage</strong><span> (</span><em></em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_local</strong><span> (</span><em>field</em><span>)</span></li>
+<li><strong>max_bitrate</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>public_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>server_status</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>error</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>http_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>https_port</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>is_remote</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>load</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>uptime</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>server_warnings</strong><span> (</span><em>array</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="http post">
 <dt id="post--vsaas-api-v2-streamers-(int-streamer_id)-provision">
 <code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/streamers/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">streamer_id</em><span class="sig-paren">)</span><code class="sig-name descname">/provision</code><a class="headerlink" href="#post--vsaas-api-v2-streamers-(int-streamer_id)-provision" title="Permalink to this definition">¶</a></dt>
@@ -2661,80 +2686,6 @@ only cameras visible to specified user with reduced set of fields.</p>
 </div>
 <div class="section" id="settings">
 <h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<dl class="http get">
-<dt id="get--vsaas-api-v2-settings">
-<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/settings</code><a class="headerlink" href="#get--vsaas-api-v2-settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get settings</p>
-<dl class="field-list">
-<dt class="field-odd">Response JSON Object</dt>
-<dd class="field-odd"><ul>
-<li><strong>api_key</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_accent_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_background_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_error_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_footer_address</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_footer_phone</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_footer_work_hours</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_header_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_info_text</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_inverted_text_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_page_title</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_sidebar_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_success_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_text_dark_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_text_light_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>brand_warning_color</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>custom_auth_logo</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
-<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
-<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
-<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
-</ul>
-</li>
-<li><strong>custom_favicon</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
-<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
-<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
-<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
-</ul>
-</li>
-<li><strong>custom_logo</strong><span> (</span><em>object</em><span>)</span><ul>
-<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
-<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
-<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
-<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
-</ul>
-</li>
-<li><strong>dns_names</strong><span> (</span><em>array</em><span>)</span></li>
-<li><strong>events_filter_backend</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>events_notify_sink</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_allow_registration</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>global_anonymous_access</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>global_auth_backend</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_dashboard_type</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_demo_access</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>global_dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_ga_key</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_homepage</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_homepage_guest</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>global_serial_binding_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>mail_from</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>mail_uri</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_center</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_gmap_key</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_language</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_osm_url</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_provider</strong><span> (</span><em>string</em><span>)</span></li>
-<li><strong>map_show_in_nav</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>max_user_sessions</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>peeklio_disable_notifications</strong><span> (</span><em>boolean</em><span>)</span></li>
-<li><strong>peeklio_license_id</strong><span> (</span><em>integer</em><span>)</span></li>
-<li><strong>service</strong><span> (</span><em>boolean</em><span>)</span></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="http put">
 <dt id="put--vsaas-api-v2-settings">
 <code class="sig-name descname">PUT </code><code class="sig-name descname">/vsaas/api/v2/settings</code><a class="headerlink" href="#put--vsaas-api-v2-settings" title="Permalink to this definition">¶</a></dt>
@@ -2806,6 +2757,80 @@ only cameras visible to specified user with reduced set of fields.</p>
 </dd>
 <dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul>
+<li><strong>api_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_accent_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_background_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_error_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_footer_address</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_footer_phone</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_footer_work_hours</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_header_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_info_text</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_inverted_text_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_page_title</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_sidebar_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_success_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_text_dark_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_text_light_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>brand_warning_color</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>custom_auth_logo</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
+<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
+<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
+<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
+</ul>
+</li>
+<li><strong>custom_favicon</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
+<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
+<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
+<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
+</ul>
+</li>
+<li><strong>custom_logo</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>b64_content</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Image data(load only)</span></li>
+<li><strong>delete</strong><span> (</span><em>boolean</em><span>)</span><span>: </span><span>Delete previous file(load only)</span></li>
+<li><strong>mime_type</strong><span> (</span><em>string</em><span>)</span><span>: </span><span>Mime type of image(load only)</span></li>
+<li><strong>url</strong><span> (</span><em>str</em><span>)</span><span>: </span><span>Image url(dump only)</span></li>
+</ul>
+</li>
+<li><strong>dns_names</strong><span> (</span><em>array</em><span>)</span></li>
+<li><strong>events_filter_backend</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>events_notify_sink</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_allow_registration</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>global_anonymous_access</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>global_auth_backend</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_dashboard_type</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_demo_access</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>global_dvr_path</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_ga_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_homepage</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_homepage_guest</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>global_serial_binding_enabled</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>mail_from</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>mail_uri</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_center</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_gmap_key</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_language</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_osm_url</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_provider</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>map_show_in_nav</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>max_user_sessions</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>peeklio_disable_notifications</strong><span> (</span><em>boolean</em><span>)</span></li>
+<li><strong>peeklio_license_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>service</strong><span> (</span><em>boolean</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-settings">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/settings</code><a class="headerlink" href="#get--vsaas-api-v2-settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get settings</p>
+<dl class="field-list">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul>
 <li><strong>api_key</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>brand_accent_color</strong><span> (</span><em>string</em><span>)</span></li>
 <li><strong>brand_background_color</strong><span> (</span><em>string</em><span>)</span></li>
