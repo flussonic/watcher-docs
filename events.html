@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Event Subscriptions &mdash; Flussonic Watcher  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Flussonic Watcher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API v2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-examples.html">API Usage Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-reference.html">API v2 Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-analytics.html">Flussonic Watcher Video Analytics API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Flussonic Watcher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Event Subscriptions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/events.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="event-subscriptions">
+<h1>Event Subscriptions<a class="headerlink" href="#event-subscriptions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subscribe">
+<h2>Subscribe<a class="headerlink" href="#subscribe" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="subscription-list">
+<h2>Subscription list<a class="headerlink" href="#subscription-list" title="Permalink to this headline">¶</a></h2>
+<p><strong>GET</strong> <code class="docutils literal notranslate"><span class="pre">/vsaas/api/v2/my/subscriptions</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;fake-2-44c9115aca&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;fake-2&quot;</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;event_type&quot;</span><span class="p">:</span> <span class="s2">&quot;camera_source_lost&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;last_event_at&quot;</span><span class="p">:</span> <span class="mi">1610525457</span><span class="p">,</span>
+      <span class="s2">&quot;notification_type&quot;</span><span class="p">:</span> <span class="s2">&quot;push&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;send_timeout&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;fake-2-44c9115aca&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;fake-2&quot;</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;event_type&quot;</span><span class="p">:</span> <span class="s2">&quot;camera_source_ready&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;last_event_at&quot;</span><span class="p">:</span> <span class="mi">1610525466</span><span class="p">,</span>
+      <span class="s2">&quot;notification_type&quot;</span><span class="p">:</span> <span class="s2">&quot;push&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;send_timeout&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unsubscribe">
+<h2>Unsubscribe<a class="headerlink" href="#unsubscribe" title="Permalink to this headline">¶</a></h2>
+<p><strong>DELETE</strong> <code class="docutils literal notranslate"><span class="pre">/vsaas/api/v2/my/subscriptions/:subscription_id</span></code></p>
+<ul class="simple">
+<li><p><strong>subscription_id</strong>: identifier</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Subscribe<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><strong>POST</strong> <code class="docutils literal notranslate"><span class="pre">/vsaas/api/v2/my/subscriptions</span></code></p>
+<ul>
+<li><p><strong>body</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Alexander Kovalev &lt;kovalev@erlyvideo.org&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

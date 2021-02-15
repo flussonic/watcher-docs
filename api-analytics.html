@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Flussonic Watcher Video Analytics API &mdash; Flussonic Watcher  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="API v2 Reference" href="api-reference.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Flussonic Watcher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">API v2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-examples.html">API Usage Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-reference.html">API v2 Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flussonic Watcher Video Analytics API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#faces">Faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#persons">Persons</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Flussonic Watcher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Flussonic Watcher Video Analytics API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api-analytics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="flussonic-watcher-video-analytics-api">
+<h1>Flussonic Watcher Video Analytics API<a class="headerlink" href="#flussonic-watcher-video-analytics-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="faces">
+<h2>Faces<a class="headerlink" href="#faces" title="Permalink to this headline">¶</a></h2>
+<dl class="http get">
+<dt id="get--vsaas-api-v2-analytics-faces">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/analytics/faces</code><a class="headerlink" href="#get--vsaas-api-v2-analytics-faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of Faces</p>
+<dl class="field-list">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul>
+<li><strong>end_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>start_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>area_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>preview</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>radius</strong><span> (</span><em>float</em><span>)</span></li>
+<li><strong>vector</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>weight</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http delete">
+<dt id="delete--vsaas-api-v2-analytics-faces-(int-id)">
+<code class="sig-name descname">DELETE </code><code class="sig-name descname">/vsaas/api/v2/analytics/faces/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-analytics-faces-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes Face</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>integer</em>) – Face identifier</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http put">
+<dt id="put--vsaas-api-v2-analytics-faces-(int-id)">
+<code class="sig-name descname">PUT </code><code class="sig-name descname">/vsaas/api/v2/analytics/faces/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-analytics-faces-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set face data</p>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>integer</em>) – Face identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>end_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>start_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>area_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>preview</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>radius</strong><span> (</span><em>float</em><span>)</span></li>
+<li><strong>vector</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>weight</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-analytics-faces-(int-id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/analytics/faces/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-analytics-faces-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single face</p>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>integer</em>) – Face identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>end_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>start_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>area_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>camera_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>preview</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>radius</strong><span> (</span><em>float</em><span>)</span></li>
+<li><strong>vector</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>weight</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-analytics-faces-(int-id)-preview.jpg">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/analytics/faces/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><code class="sig-name descname">/preview.jpg</code><a class="headerlink" href="#get--vsaas-api-v2-analytics-faces-(int-id)-preview.jpg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Face Preview</p>
+<dl class="field-list simple">
+<dt class="field-odd">Response</dt>
+<dd class="field-odd"><p><cite>image/jpeg</cite> Person Preview Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="persons">
+<h2>Persons<a class="headerlink" href="#persons" title="Permalink to this headline">¶</a></h2>
+<dl class="http post">
+<dt id="post--vsaas-api-v2-analytics-persons">
+<code class="sig-name descname">POST </code><code class="sig-name descname">/vsaas/api/v2/analytics/persons</code><a class="headerlink" href="#post--vsaas-api-v2-analytics-persons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Person</p>
+<dl class="field-list">
+<dt class="field-odd">Request JSON Object</dt>
+<dd class="field-odd"><ul>
+<li><strong>data</strong><span> (</span><em>dict</em><span>)</span><span>: </span><span>form-data; name=”data”; filename=%any% Content-Type: image/jpeg</span></li>
+<li><strong>external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>note</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>person_category_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person_list_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-analytics-persons">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/analytics/persons</code><a class="headerlink" href="#get--vsaas-api-v2-analytics-persons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of Persons</p>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>person_list</strong> – person_list - return persons only for selected list</p></li>
+<li><p><strong>external_id</strong> – external_id - return persons only with selected external_id</p></li>
+<li><p><strong>person_category</strong> – person_category - return persons only for selected person category</p></li>
+<li><p><strong>utc_from</strong> – seconds since epoch in UTC - return only persons, appeared after selected time</p></li>
+<li><p><strong>utc_to</strong> – seconds since epoch in UTC - return only persons appeared before selected time</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>first_seen_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>last_seen_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>data</strong><span> (</span><em>dict</em><span>)</span><span>: </span><span>form-data; name=”data”; filename=%any% Content-Type: image/jpeg</span></li>
+<li><strong>external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>note</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>person_category_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person_list_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http delete">
+<dt id="delete--vsaas-api-v2-analytics-persons-(int-id)">
+<code class="sig-name descname">DELETE </code><code class="sig-name descname">/vsaas/api/v2/analytics/persons/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#delete--vsaas-api-v2-analytics-persons-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes person</p>
+<dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>integer</em>) – Person identifier</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http put">
+<dt id="put--vsaas-api-v2-analytics-persons-(int-id)">
+<code class="sig-name descname">PUT </code><code class="sig-name descname">/vsaas/api/v2/analytics/persons/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#put--vsaas-api-v2-analytics-persons-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Request Form</dt>
+<dd class="field-odd"><ul>
+<li><strong>data</strong><span> (</span><em>dict</em><span>)</span><span>: </span><span>form-data; name=”data”; filename=%any% Content-Type: image/jpeg</span></li>
+<li><strong>external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>note</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>person_category_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person_list_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-analytics-persons-(int-id)">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/analytics/persons/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--vsaas-api-v2-analytics-persons-(int-id)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single person</p>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>integer</em>) – Person identifier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul>
+<li><strong>first_seen_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>last_seen_at</strong><span> (</span><em>string (datetime)</em><span>)</span></li>
+<li><strong>cars</strong><span> (</span><em>object array</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>plate_number</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>category</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>external_id</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>note</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>person_category_id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>person_list</strong><span> (</span><em>object</em><span>)</span><ul>
+<li><strong>config</strong><span> (</span><em>dict</em><span>)</span></li>
+<li><strong>id</strong><span> (</span><em>integer</em><span>)</span></li>
+<li><strong>name</strong><span> (</span><em>string</em><span>)</span></li>
+<li><strong>organization_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</li>
+<li><strong>person_list_id</strong><span> (</span><em>integer</em><span>)</span></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt id="get--vsaas-api-v2-analytics-persons-(int-id)-preview.jpg">
+<code class="sig-name descname">GET </code><code class="sig-name descname">/vsaas/api/v2/analytics/persons/</code><span class="sig-paren">(</span><em class="property">int: </em><em class="sig-param">id</em><span class="sig-paren">)</span><code class="sig-name descname">/preview.jpg</code><a class="headerlink" href="#get--vsaas-api-v2-analytics-persons-(int-id)-preview.jpg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Person Preview</p>
+<dl class="field-list simple">
+<dt class="field-odd">Response</dt>
+<dd class="field-odd"><p><cite>image/jpeg</cite> Person Preview Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="api-reference.html" class="btn btn-neutral float-left" title="API v2 Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018, Alexander Kovalev &lt;kovalev@erlyvideo.org&gt;
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
