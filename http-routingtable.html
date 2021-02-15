@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,18 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -29,10 +34,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
  
@@ -55,7 +56,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Flussonic Watcher
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Flussonic Watcher
           
 
           
@@ -78,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -94,6 +96,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -132,7 +135,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>HTTP Routing Table</li>
     
@@ -204,26 +207,6 @@
        <td></td>
        <td>
        <a href="api-reference.html#get--vsaas-api-v2-domains-(int-domain_id)-presets-(int-preset_id)"><code class="xref">GET /vsaas/api/v2/domains/(int:domain_id)/presets/(int:preset_id)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api-reference.html#get--vsaas-api-v2-events"><code class="xref">GET /vsaas/api/v2/events</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api-reference.html#get--vsaas-api-v2-events-(string-event_id)"><code class="xref">GET /vsaas/api/v2/events/(string:event_id)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api-reference.html#get--vsaas-api-v2-events-(string-event_id)-preview.jpg"><code class="xref">GET /vsaas/api/v2/events/(string:event_id)/preview.jpg</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api-reference.html#get--vsaas-api-v2-events-csv"><code class="xref">GET /vsaas/api/v2/events/csv</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
@@ -418,21 +401,6 @@
      <tr>
        <td></td>
        <td>
-       <a href="api-reference.html#post--vsaas-api-v2-events"><code class="xref">POST /vsaas/api/v2/events</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api-reference.html#post--vsaas-api-v2-events-activity.csv"><code class="xref">POST /vsaas/api/v2/events/activity.csv</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="api-reference.html#post--vsaas-api-v2-events-csv"><code class="xref">POST /vsaas/api/v2/events/csv</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
        <a href="api-reference.html#post--vsaas-api-v2-mosaics"><code class="xref">POST /vsaas/api/v2/mosaics</code></a></td><td>
        <em></em></td></tr>
      <tr>
@@ -558,11 +526,6 @@
      <tr>
        <td></td>
        <td>
-       <a href="api-reference.html#put--vsaas-api-v2-events-(string-event_id)"><code class="xref">PUT /vsaas/api/v2/events/(string:event_id)</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
        <a href="api-reference.html#put--vsaas-api-v2-mosaics-(int-mosaic_id)"><code class="xref">PUT /vsaas/api/v2/mosaics/(int:mosaic_id)</code></a></td><td>
        <em></em></td></tr>
      <tr>
@@ -678,11 +641,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Alexander Kovalev &lt;kovalev@erlyvideo.org&gt;
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -693,7 +664,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
